@@ -1,0 +1,24 @@
+p {
+  color: #737373;
+  /* background-color: bisque; */
+  font-size: 30px;
+}
+
+.div1 {
+  background-color: red;
+}
+
+.span1 {
+  color: blue;
+}
+
+.div3 {
+  position: absolute;
+  top: 40px;
+  background-color: wheat;
+}
+
+.div2 {
+  display: inline-block;
+  background-color: thistle;
+}

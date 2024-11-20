@@ -1,0 +1,24 @@
+.grid {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 1fr;
+}
+
+.div1,
+.div3,
+.div5 {
+  background-color: salmon;
+  margin: 20px;
+  height: 100px;
+}
+
+.div2,
+.div4 {
+  background-color: plum;
+  margin: 15px;
+  height: 100px;
+}
+
+.grid1 {
+    display: grid;
+    grid-template-columns: 100px 100px 2fr 1fr;
+  }
