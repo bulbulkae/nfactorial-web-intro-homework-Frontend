@@ -1,0 +1,55 @@
+/* <uniquifier>: Use a unique and descriptive class name */
+/* <weight>: Use a value from 100 to 900 */
+
+body {
+    min-height: 100vh; 
+    /* 100vh = fill all doc field that we see */
+
+
+  font-family: 'Raleway', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+    height: 40px;
+    display: flex;
+    background-color: cornsilk;
+    align-items: center;
+    column-gap: 1rem;
+    padding: 1rem;
+
+}
+
+main {
+    display: flex;
+    flex: 1;
+    gap: 1rem;
+    flex-wrap: wrap;
+    background-color:aquamarine;
+}
+
+.header_input {
+    width: 10rem;
+    height: 1.5rem;
+    padding: 4px;
+
+}
+
+
+.todolist {
+    height: fit-content;
+    width: 18rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    background-color:antiquewhite;
+    padding: 1rem;
+    border-radius: 14px;
+
+}
+
