@@ -1,36 +1,29 @@
-// Перепишите функцию, используя оператор '?' или '||'
+// done Перепишите функцию, используя оператор '?' или '||'
+checkAge = (age) => age > 18 ? true : confirm('Родители разрешили?');
 
-// function checkAge(age) {
-//     if (age > 18) {
-//       return true;
-//     } else {
-//       return confirm('Родители разрешили?');
-//     }
-//   }
-
-checkAge = (age) =>
+// checkAge(18);
 
 // done // Функция pow(x,n)
 
-// pow = (a, b) => {
-//   let res = 1;
-//   for (let i = 1; i <= b; i++) {
-//     res *= a;
-//   }
+pow = (a, b) => {
+  let res = 1;
+  for (let i = 1; i <= b; i++) {
+    res *= a;
+  }
 
-//   return res;
-// };
+  return res;
+};
 
-// console.log(pow(3,4));
+console.log(pow(3,4));
 
 // done //   Перепишите с использованием функции-стрелки
-// ask = (question, yes, no) => (confirm(question) ? yes() : no());
+ask = (question, yes, no) => (confirm(question) ? yes() : no());
 
-// ask(
-//   'Вы согласны?',
-//   () => alert('Вы согласились.'),
-//   () => alert('Вы отменили выполнение.'),
-// );
+ask(
+  'Вы согласны?',
+  () => alert('Вы согласились.'),
+  () => alert('Вы отменили выполнение.'),
+);
 
 // done // Сортировать в порядке по убыванию
 // let arr = [5, 2, 1, -10, 8];
@@ -48,23 +41,20 @@ checkAge = (age) =>
 
 // alert(names); // Вася, Петя, Маша
 
-//  Трансформировать в объекты
-// let vasya = { name: "Вася", surname: "Пупкин", id: 1 };
-// let petya = { name: "Петя", surname: "Иванов", id: 2 };
-// let masha = { name: "Маша", surname: "Петрова", id: 3 };
+// done Трансформировать в объекты
+let vasya = { name: 'Вася', surname: 'Пупкин', id: 1 };
+let petya = { name: 'Петя', surname: 'Иванов', id: 2 };
+let masha = { name: 'Маша', surname: 'Петрова', id: 3 };
 
-// let users = [ vasya, petya, masha ];
+let users = [vasya, petya, masha];
 
-// let usersMapped =  /* ... ваш код ... *//*
-// usersMapped = [
-//   { fullName: "Вася Пупкин", id: 1 },
-//   { fullName: "Петя Иванов", id: 2 },
-//   { fullName: "Маша Петрова", id: 3 }
-// ]
-// */
+let usersMapped = users.map((user) => ({
+  fullName: `${user.name} ${user.surname}`,
+  id: user.id,
+}));
 
-// alert( usersMapped[0].id ) // 1
-// alert( usersMapped[0].fullName ) // Вася Пупкин
+alert(usersMapped[0].id); // 1
+alert(usersMapped[0].fullName); // Вася Пупкин
 
 //  done // Получить средний возраст
 // let vasya = { name: 'Вася', age: 25 };
