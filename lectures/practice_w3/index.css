@@ -1,0 +1,13 @@
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  background-color: coral;
+}
+
+#header_bttn {
+  width: 10rem;
+  background-color: brown;
+  border-radius: 14px;
+}

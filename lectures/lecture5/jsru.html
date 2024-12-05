@@ -1,0 +1,94 @@
+
+<!-- <body>
+  <div id="elem" about="Elephant"></div>
+
+  <script>
+    console.log(elem.getAttribute('About')); // (1) 'Elephant', чтение
+
+    elem.setAttribute('Test', 123); // (2), запись
+
+    console.log(elem.outerHTML); // (3), посмотрим, есть ли атрибут в HTML (да)
+
+    for (let attr of elem.attributes) {
+      // (4) весь список
+      console.log(`${attr.name} = ${attr.value}`);
+    }
+  </script>
+</body> -->
+
+<!-- Elephant
+hw5/:17 <div id="elem" about="Elephant" test="123"></div>
+hw5/:21 id = elem
+hw5/:21 about = Elephant
+hw5/:21 test = 123 -->
+
+<!-- _______________________________________________ -->
+<!-- DOM-свойства не всегда являются строками. 
+
+ <input id="input" type="checkbox" checked> checkbox
+
+<script>
+  alert(input.getAttribute('checked')); // значение атрибута: пустая строка
+  alert(input.checked); // значение свойства: true
+</script> -->
+<!-- 
+DOM-свойство href всегда содержит полный URL, даже если атрибут содержит относительный URL или просто #hash.
+<a id="a" href="#hello">link</a>
+<script>
+  // атрибут
+  alert(a.getAttribute('href')); // #hello
+
+  // свойство
+  alert(a.href ); // полный URL в виде http://site.com/page#hello
+</script> -->
+
+<!-- _____________________________________ -->
+<!-- NOT STANDARD ATTRIBUTE -->
+<!-- пометить div, чтобы показать здесь поле "name" -->
+<!-- <div show-info="name"></div> -->
+<!-- а здесь возраст "age" -->
+<!-- <div show-info="age"></div> -->
+<!-- 
+<script>
+  // код находит элемент с пометкой и показывает запрошенную информацию
+  let user = {
+    name: 'Pete',
+    age: 25,
+  };
+
+  for (let div of document.querySelectorAll('[show-info]')) {
+    // вставить соответствующую информацию в поле
+    let field = div.getAttribute('show-info');
+    div.innerHTML = user[field]; // сначала Pete в name, потом 25 в age
+  }
+</script> -->
+
+<!-- _____________________________________________ -->
+<!-- Все атрибуты, начинающиеся с префикса «data-», зарезервированы для использования программистами. Они доступны в свойстве dataset.
+
+Например, если у elem есть атрибут "data-about", то обратиться к нему можно как elem.dataset.about.
+
+Как тут: -->
+
+<!-- <body data-about="Elephants">
+<script>
+  alert(document.body.dataset.about); // Elephants
+</script> -->
+
+
+
+Есть 6 основных методов поиска элементов в DOM:
+
+Метод	Ищет по...	Ищет внутри элемента?	Возвращает живую коллекцию?
+querySelector	CSS-selector	✔	          -
+querySelectorAll	CSS-selector	✔	      -
+getElementById	id	-	                   -
+getElementsByName	name	-	                ✔
+getElementsByTagName	tag or '*'	✔      	✔
+getElementsByClassName	class	✔	          ✔
+
+
+Eсть метод elem.matches(css), который проверяет, удовлетворяет ли элемент CSS-селектору.
+Метод elem.closest(css) ищет ближайшего по иерархии предка, соответствующему данному CSS-селектору. Сам элемент также включён в поиск.
+
+elemA.contains(elemB) вернёт true, если elemB находится внутри elemA (elemB потомок elemA) или когда elemA==elemB.

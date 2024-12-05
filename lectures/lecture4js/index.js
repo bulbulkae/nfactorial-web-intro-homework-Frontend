@@ -160,19 +160,65 @@
 // //join - convert array to string
 // console.log(arr1.join());
 
-const arr3 = [21, 32, 54, 23, 1, 700, 9, 3];
-// sort - works for string
-// [1, 21, 23, 3, 32, 54, 700, 9]
-arr3.sort((a, b) => a - b);
-console.log(arr3);
-arr3.sort((a, b) => b - a);
-console.log(arr3);
+// const arr3 = [21, 32, 54, 23, 1, 700, 9, 3];
+// // sort - works for string
+// // [1, 21, 23, 3, 32, 54, 700, 9]
+// arr3.sort((a, b) => a - b);
+// // console.log(arr3);
+// arr3.sort((a, b) => b - a);
+// // console.log(arr3);
 
 // find
-const findFunc = arr3.find(function (item) {
-  return item === 23;
+// const findFunc = arr3.find(function (item) {
+//   return item === 23;
+// });
+
+// const findArrF = arr3.find((item) => item === 23);
+// console.log(findArrF);
+
+// const findArrFByIndex = arr3.find((item, index) => index === 0);
+// console.log(findArrFByIndex);
+
+// for (let i = 0; i < arr3.length; i++) {
+//   console.log(`${i}s index of ${arr3[i]}`);
+
+//   arr3[i] === 21 ? console.log('yes index ', i, arr3[i]) : 'no';
+// }
+
+// ____________________
+// Transform an array
+
+// forEach()
+
+const data = ['a', 'b', 's', 'a', 'bbb'];
+
+// for(let i=0; ...)
+// for(let i in data)
+// for(let i of data)
+
+data.forEach((item) => console.log(item));
+
+const data1 = data.map((item) => {
+  item.includes('a') ? 'a' : item;
+
+  if (item.includes('a')) {
+    return 'a';
+  }
+  return item;
 });
+console.log(data1);
 
-const findArrF = arr3.find((item) => item === 12);
+const data2 = data.filter((item) => item === 'a');
+console.log(data2); //['a', 'a']
 
-console.log(findArrF);
+const data3 = data1.some((item) => item === 'b');
+console.log(data3); //true
+
+const data4 = data1.every((item) => item === 'b');
+console.log(data4); 
+//const data = ['a', 'b', 's', 'a', 'bbb']; => false
+//const data = ['b', 'b', 'b']; => true
+
+
+// number = +prompt('Enter your fav number!', '0');
+// +prompt = trasnforming to number with sign +
