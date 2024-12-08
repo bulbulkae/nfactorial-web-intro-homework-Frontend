@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">button</button>
+    <script>
+      let button = document.getElementById('btn');
+
+      button.addEventListener('click', () => alert('1'));
+      //   Обработчик, добавленный через addEventListener (выводящий "1"), сработает, так как он остался активным.
+      button.removeEventListener('click', () => alert('1'));
+      //   alert не сработает потому что мы сделали remove
+      button.onclick = () => alert(2);
+      //   сработает обработчик, установленый через button.onclick (выводящий "2").
+    </script>
+  </body>
+</html>

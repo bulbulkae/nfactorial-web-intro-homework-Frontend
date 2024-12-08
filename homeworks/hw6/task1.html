@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <input type="button" id="hider" value="Нажмите, чтобы спрятать текст" />
+
+    <div id="text">Текст</div>
+
+    <script>
+      let btn = document.getElementById('hider');
+      let divText = document.getElementById('text');
+      //   btn = addEventListener('click', () => divText.remove());
+      btn = addEventListener('click', () => (divText.hidden = 1));
+    </script>
+  </body>
+</html>
