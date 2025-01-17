@@ -1,0 +1,147 @@
+body {
+  background-color: rgba(241, 241, 241, 1);
+  /* display: flex;
+  flex-direction: column; */
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 12px 80px;
+}
+
+.logoDiv {
+  display: flex;
+  /* height: 22px; */
+  gap: 15px;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  width: 46px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.btn {
+  border: 0px;
+  border-radius: 100px;
+  padding: 10px 12px;
+}
+
+.selected {
+  background-color: rgba(8, 30, 52, 0.12);
+}
+
+/* _______________________________ */
+
+.first {
+  /* height: 620px; */
+  padding: 100px 150px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.first-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 0px 30px;
+}
+
+.first-img {
+  width: 1300px;
+  height: 850px;
+  border-radius: 52px;
+  margin: 20px;
+}
+
+.first-div {
+  display: flex;
+  align-items: center;
+}
+/* _______________________________ */
+.second {
+  height: 562px;
+  background-color: rgba(225, 222, 231, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.second-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 40px;
+}
+
+.images {
+  width: 64px;
+  margin: 18px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items:start;
+  gap: 48px;
+  width: 400px;
+  height: 186px;
+}
+
+/* _______________________________ */
+.third-1-content {
+  display: flex;
+}
+
+/* _______________________________
+ */
+
+.third-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* _______________________________
+ */
+
+footer {
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 1fr 1fr 6fr;
+}
+
+.madeby {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.libre-baskerville-bold {
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.kanit-thin {
+  font-family: 'Kanit', serif;
+  font-weight: 500;
+}
+
+.inter {
+  font-family: 'Inter', serif;
+  font-style: normal;
+  margin: 4px 15px;
+}

@@ -1,0 +1,8 @@
+{
+    "name": "nfactorial-web-intro-homework-Frontend",
+    "description": "Learning Front",
+    "scripts": {},
+    "dependencies": {
+        "bootstrap": "^5.3.3"
+    }
+}
